@@ -1,0 +1,79 @@
+/* pages/index/index.wxss */
+.container .logo {
+  height: 75rpx;
+  line-height: 75rpx;
+}
+.container .logo image {
+  width: 190rpx;
+  height: 75rpx;
+  display: block;
+  margin: 0 auto;
+}
+.swiper {
+  height: 300rpx;
+  width: 100%;
+}
+.news-dt {
+  height: 100rpx;
+  margin-bottom: 2rpx;
+  overflow: hidden;
+}
+.news-dt image {
+  width: 120rpx;
+  height: 100rpx;
+  float: left;
+}
+.dt-con {
+  height: 40rpx;
+  margin-bottom: 4rpx;
+}
+.dt-con text{ 
+  color: red; 
+  font-size: 22rpx; 
+  border: 1px solid #FF0000; 
+  border-radius: 5px; 
+  padding: 0rpx 12rpx;
+  margin-left: 10rpx;
+  float: left;
+}
+.dt-con .dt1 {
+  width: 70%;
+  display: inline-block;
+  float: left;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+.dt-tit image {
+  width: 120rpx;
+  height: 120rpx;
+}
+.dt-tit text { 
+  font-size: 26rpx; 
+  color: #666666;
+}
+.tit-left { 
+  width:50%; 
+  text-align: center;
+}
+.gr .gr-read text { 
+  font-size: 26rpx; 
+  color: #333333;
+  border-left: 6rpx solid #63b4ad;
+  margin: 20rpx 0rpx 20rpx 20rpx;
+}
+.gr .read-date image {
+  width: 55rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
+}
+
+.gr .read-date image:nth-child(2) {
+  width: 60rpx;
+}
+.gr .read-date { 
+  width:33.3%; 
+  text-align: center;
+}
+
+
+

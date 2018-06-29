@@ -1,0 +1,45 @@
+<!--pages/news/newsList.wxml-->
+<block>
+  <view class='header'>
+    <navigator url="../index/index" hover-class="navigator-hover" open-type="switchTab">
+      <text class='iconfont icon-jiantou3 icon-left'></text>
+    </navigator>
+    <text class='title'>新闻中心</text>
+  </view>
+  <view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">图书知识</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">知阅资讯</view>  
+  </view>  
+  
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <!-- list1  -->
+      <swiper-item>  
+        <view class="news-list clearfix" wx:for="{{bookList}}" wx:key="{{item.id}}"> 
+          <view class='left fl' bindtap='bindSkip' data-id="{{item.article_id}}">
+            <text>{{item.create_time_d}}</text>
+            <text  class='day'>{{item.create_time_y}}</text>
+          </view>   
+          <view class='right fl' bindtap='bindSkip' data-id="{{item.article_id}}">
+            <text class='news-tit'>{{item.title}}</text>
+            <text class='elli2'>{{item.summary}}</text>
+          </view> 
+        </view>
+      </swiper-item> 
+       
+<!-- list2  -->
+      <swiper-item>  
+         <view class="news-list clearfix" wx:for="{{zxList}}" wx:key="{{item.id}}"> 
+          <view class='left fl' bindtap='bindSkip' data-id="{{item.article_id}}">
+            <text>{{item.create_time_d}}</text>
+            <text  class='day'>{{item.create_time_y}}</text>
+          </view>   
+          <view class='right fl' bindtap='bindSkip' data-id="{{item.article_id}}">
+            <text class='news-tit'>{{item.title}}</text>
+            <text class='elli2'>{{item.summary}}</text>
+          </view> 
+        </view>
+      </swiper-item>  
+  </swiper> 
+
+</block>
+

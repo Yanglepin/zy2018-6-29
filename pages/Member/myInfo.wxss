@@ -1,0 +1,51 @@
+/* pages/info/myInfo.wxss */
+.info-bg{
+  position: relative;
+  height: 330rpx;
+}
+
+.info-bg image {
+  width: 150rpx;
+  height: 150rpx;
+  position: absolute;
+  top: 22%;
+  left: 15%;
+  display: inline-block;
+  border: 5rpx solid #faf8f8;
+  border-radius: 50%;
+}
+.info-bg .tel {
+  position: absolute;
+  top: 40%;
+  left: 42%;
+  width: 50%;
+  font-size: 32rpx;
+  color: #333333;
+}
+.info-bg .tel text {
+  display: inline-block;
+}
+.info-bg .tel text.iconfont {
+  padding-left: 30%;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.member-tit {
+  border-bottom: 6px solid #f0f1f2;
+  border-top: 6px solid #f0f1f2;
+}
+.member-tit view{
+  width: 25%;
+  margin: 20rpx auto;
+  color: #666666;
+  font-size: 26rpx;
+}
+.member-tit view:not(:last-child) {
+  border-right: 1px solid #f0f1f2;
+  box-sizing: border-box;
+}
+.member-tit view text {
+  text-align: center;
+  height: 45rpx;
+  line-height: 45rpx;
+}

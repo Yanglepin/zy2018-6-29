@@ -1,0 +1,76 @@
+<!--pages/borrowHistory/borrowHistory.wxml-->
+<block>
+  <view class='header'>
+    <navigator url="../index/index" hover-class="navigator-hover" bindtap="navigateBack">
+      <text class='iconfont icon-jiantou3 icon-left'></text>
+    </navigator>
+    <text class='title'>图书借阅</text> 
+  </view>
+  <view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0? 'on' : ''}}" data-current="0" bindtap="swichNav">借阅中</view>  
+    <view class="swiper-tab-list {{currentTab==1? 'on' : ''}}" data-current="1" bindtap="swichNav">借阅历史</view>  
+  </view>  
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <!-- list1  -->
+      <swiper-item class="swiper-item">  
+      <scroll-view scroll-x="false" scroll-y="true" class='scroll-views'>
+        <view class="book-list clearfix bb" wx:for="{{bookBorrow}}">
+          <view class="left fl" bindtap='goinfo' data-goodsid="{{item.books_id}}">
+              <image src="{{ImgUrl}}{{item.pic_cover}}" style='width:120rpx;height:170rpx;'></image> 
+          </view>
+          <view class="right fl">
+            <text class="elli2" bindtap='goinfo' data-goodsid="{{item.books_id}}">{{item.goods_name}}</text>
+            <view class='his-list clearfix'>
+              <view class='fl'>编号：<text>{{item.guan_code}}</text></view>
+              <view class='fl'>位置：<text>{{item.shu_name}}-{{item.wei_name}}</text></view>
+              <view class='fl'>借阅：<text>{{item.borrow_time}}</text></view>
+              <view class='fl'>应还：<text>{{item.ying_time}}</text></view>
+              <view class='fl'>借阅人次：<text>{{item.sales}}/人</text></view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+
+      </swiper-item>      
+<!-- list2  -->
+      <swiper-item class="swiper-item">  
+          
+            <view class='top-search clearfix'>
+              <input type='text' placeholder='请输入书名' bindinput="bindKeywordInput" value="{{searchKeyword}}"></input>
+              <icon type='search' size='15'></icon>
+              <view class='search-txt'>
+                <text bindtap='keywordSearch'>搜索</text>
+              </view>
+            </view>
+          <scroll-view scroll-x="false" scroll-y="true" class='scroll-views'> 
+          <block wx:if="{{borrowHistory.length > 0}}">
+            <view class="book-list clearfix bb" wx:for="{{borrowHistory}}">
+              <view class="left fl" bindtap='goinfo' data-goodsid="{{item.books_id}}">
+                <image src="{{ImgUrl}}{{item.pic_cover}}" style='width:120rpx;height:170rpx;'></image> 
+              </view>
+              <view class="right fl">
+                <text class="elli2" bindtap='goinfo' data-goodsid="{{item.books_id}}">{{item.goods_name}}</text>
+                <view class='his-list clearfix'>
+                  <view class='fl'>编号：<text>{{item.guan_code}}</text></view>
+                  <view class='fl'>位置：<text>{{item.shu_name}}-{{item.wei_name}}</text></view>
+                  <view class='fl'>借阅：<text>{{item.borrow_time}}</text></view>
+                  <view class='fl'>应还：<text>{{item.ying_time}}</text></view>
+                  <view class='fl'>借阅人次：<text>{{item.sales}}/人</text></view>
+                </view>
+              </view>
+            </view>
+          </block>
+          <block wx:else>
+            <view class='book-list'>
+              <text style='margin: 5% 32%; font-size:30rpx;'>暂时还没有数据.....</text>
+            </view>
+          </block>
+          </scroll-view> 
+        
+        
+      </swiper-item>  
+  </swiper> 
+
+</block>
+
+

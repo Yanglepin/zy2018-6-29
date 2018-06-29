@@ -1,0 +1,75 @@
+<!--pages/info/myInfo.wxml-->
+<block> 
+  <view class='header'>
+  <navigator url="../index/index" hover-class="navigator-hover" open-type="switchTab">
+    <text class='iconfont icon-jiantou3 icon-left'></text>
+  </navigator>
+    <text class='title'>个人中心</text>
+  </view>
+  <view class="info-bg clearfix" style='background: url(./icons/member_bg.jpg) center 100% no-repeat;'>
+    <!-- <image src='{{userInfo.avatarUrl}}' ></image> -->
+    <image src='{{ImgUrl}}{{memberIndex.user_headimg}}'></image>
+    <view class='tel'>
+      <navigator url="../alterInfo/alterInfo" hover-class="navigator-hover">
+        <text>{{memberIndex.user_tel}}</text> 
+        <text class='iconfont icon-jiantou'></text>
+      </navigator>
+    </view>
+  </view>
+  <view class='member-tit clearfix'>
+    <view class='fl'>
+      <navigator url="../borrowHistory/borrowHistory?currentTab=0" hover-class="navigator-hover">
+        <text>借阅中</text>
+        <text>{{memberIndex.jie_yue_zhong}}</text>
+      </navigator>
+    </view>
+
+    <view class='fl'>
+        <text bindtap="onMyborrow">预借</text>
+        <text bindtap='onMyborrow'>{{memberIndex.yu_jie}}</text>
+    </view>
+       
+    <view class='fl'>
+      <navigator url="../myComment/myComment" hover-class="navigator-hover">
+        <text>评论</text>
+        <text>{{memberIndex.ping_lun_count}}</text>
+      </navigator>
+    </view>
+    
+    <view class='fl'>
+      <navigator url="../myCollect/myCollect" hover-class="navigator-hover">
+        <text>收藏</text>
+        <text>{{memberIndex.shou_cang_count}}</text>
+      </navigator>
+    </view> 
+    
+  </view>
+
+  <view class='list_status'>
+    <view class='yd-list'>
+      <view class='list-con bb hui24 clearfix'>
+        <navigator url="../myInfo/info" hover-class="navigator-hover">
+          <image src='../../icons/hy1.png'></image>
+          <text class='name fl'>我的信息</text>
+          <text class='iconfont icon-jiantou fr'></text>
+        </navigator>
+      </view>
+
+      <view class='list-con bb hui24 clearfix'>
+        <navigator url="../borrowHistory/borrowHistory?currentTab=1"  hover-class="navigator-hover">
+          <image src='../../icons/hy2.png'></image>
+          <text class='name fl'>借阅历史</text>
+          <text class='iconfont icon-jiantou fr'></text>
+        </navigator>
+      </view>
+      <view class='list-con bb hui24 clearfix'>
+        <navigator url="../aboutUs/aboutUs" hover-class="navigator-hover">
+          <image src='../../icons/hy3.png'></image>
+          <text class='name fl'>关于我们</text>
+          <text class='iconfont icon-jiantou fr'></text>
+        </navigator>
+      </view> 
+    </view>
+  </view>
+
+</block>

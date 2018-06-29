@@ -1,0 +1,7 @@
+/* pages/information/information.wxss */
+ @import "../../wxParse/wxParse.wxss"; 
+.find-details image {
+  margin: 20rpx;
+  width: 95%;
+  height: 350rpx;
+}

@@ -1,0 +1,33 @@
+<!--pages/Info/info.wxml-->
+<block>
+<view class="container">
+  <view class='header bb10'>
+    <navigator url="../index/index" hover-class="navigator-hover" bindtap="navigateBack">
+      <text class='iconfont icon-jiantou3 icon-left'></text>
+    </navigator>
+    <text class='title'>我的信息</text>
+  </view>
+  <view class='info-lst'>
+    <view>个人信息</view> 
+    <text>宝宝姓名：{{myinfo.real_name}}</text>
+    <text>手机号：{{myinfo.user_tel}}</text>
+    <text>宝宝生日：{{myinfo.birthday}}</text>
+    <text>地址：{{myinfo.address_info}}</text>
+  </view>
+
+  <view class='info-lst'>
+    <view>已借阅</view>
+    <text>您目前共借阅了{{myinfo.jie_yue_liang}}本书</text>
+    <text>我们已经为您服务了{{myinfo.fu_wu_ci}}次</text>
+  </view> 
+
+  <view class='info-lst'>
+    <view>借阅计划</view>
+    <text>会员卡类型：{{myinfo.card_info.card_name}} </text>
+    <text>服务期限：{{myinfo.card_info.text}}</text>
+    <text>服务截止：{{myinfo.card_info.buy_end_time}}</text>
+    <text>归还周期：{{myinfo.card_info.card_days}}天</text>
+    <text>单次借阅：{{myinfo.card_info.card_amount}}本/次</text>
+  </view>
+</view>
+</block>

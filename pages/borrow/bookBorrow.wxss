@@ -1,0 +1,33 @@
+/* pages/borrow/bookBorrow.wxss */
+.top-search {
+  position: relative;
+}
+.container{
+  height: auto;
+}
+.top-search input {
+    width: 70%;
+    /* color: #c6c3c3; */
+    font-size: 24rpx;
+    padding-left: 10rpx;
+    margin: 15rpx 20rpx;
+    border: 1px solid #d1d2d3;
+    border-radius: 5px;
+    height: 30px;
+    outline: none;
+}
+.top-search icon {
+  position: absolute;
+  left: 69%;
+  top: 15rpx;
+}
+.top-search .search-txt {
+  position: absolute;
+  left: 75%;
+  top: 5rpx;
+}
+.top-search .search-txt text {
+  font-size: 30rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}

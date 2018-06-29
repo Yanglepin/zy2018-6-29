@@ -1,0 +1,53 @@
+<!--pages/myComment/myComment.wxml-->
+<block>
+  <view class='header'>
+    <navigator url="../index/index" hover-class="navigator-hover" bindtap="navigateBack">
+      <text class='iconfont icon-jiantou3 icon-left'></text>
+    </navigator>
+    <text class='title'>我的评论</text>
+  </view>
+  <view class="book-list clearfix bb" wx:for="{{bookList}}">
+    <view class="left fl">
+      <navigator url="../details/details" hover-class="navigator-hover">
+        <image src="{{item.icon}}" style='width:110rpx;height:150rpx;'></image> 
+      </navigator>
+    </view>
+    <view class="right fl" style='padding-top: 35rpx;'>
+      <navigator url="../details/details" hover-class="navigator-hover">
+        <text class="elli2">{{item.name}}</text>
+      </navigator>
+      <text class='mt10'>评论发表于：{{}}</text>
+    </view>
+  </view>
+
+  <!-- <view class="book-list clearfix bb">
+    <view class="left fl">
+      <navigator url="../details/details" hover-class="navigator-hover">
+        <image src="../../icons/book.png" style='width:110rpx;height:150rpx;'></image> 
+      </navigator>
+    </view>
+    <view class="right fl">
+      <navigator url="../details/details" hover-class="navigator-hover">
+        <text class="elli2">小小科学家，困厄于名缰利锁，自然面目可憎，焉能语言有味?决心的起点，蹉跎的终点，与心灵对话</text>
+      </navigator>
+      <text class='mt10'>评论发表于：2018-5-14  4:12</text>
+    </view>
+  </view>
+
+  <view class="book-list clearfix bb">
+    <view class="left fl">
+      <navigator url="../details/details" hover-class="navigator-hover">
+        <image src="../../icons/book.png" style='width:110rpx;height:150rpx;'></image> 
+      </navigator>
+    </view>
+    <view class="right fl">
+      <navigator url="../details/details" hover-class="navigator-hover">
+        <text class="elli2">小小科学家，困厄于名缰利锁，自然面目可憎，焉能语言有味?决心的起点，蹉跎的终点，与心灵对话</text>
+      </navigator>
+      <text class='mt10'>评论发表于：2018-5-14  4:12</text>
+    </view>
+  </view> -->
+    
+</block>
+
+

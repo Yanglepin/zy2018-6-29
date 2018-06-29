@@ -1,0 +1,13 @@
+<!--pages/information/information.wxml-->
+    <import src="../../wxParse/wxParse.wxml"/>       
+<block>
+   <view class='header'>
+    <text class='iconfont icon-jiantou3 icon-left' bindtap="navigateBack"></text>
+    <text class='title'>{{article.title}}</text>
+  </view>
+  <view class='find-details' style='margin:0px -10px;'>
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+  </view> 
+</block>
+
+

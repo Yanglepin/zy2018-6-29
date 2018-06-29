@@ -1,0 +1,13 @@
+<!--pages/aboutUs/aboutUs.wxml-->
+  <import src="../../wxParse/wxParse.wxml"/>      
+<block>
+  <view class='header'>
+    <navigator url="../news/newsList" hover-class="navigator-hover" bindtap="navigateBack">
+      <text class='iconfont icon-jiantou3 icon-left'></text>
+    </navigator>
+      <text class='title'>关于我们</text>
+  </view>
+  <view class='find-details'>
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+  </view>
+</block>

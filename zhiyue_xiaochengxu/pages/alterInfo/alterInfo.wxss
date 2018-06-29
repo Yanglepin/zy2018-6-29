@@ -1,0 +1,8 @@
+/* pages/alterInfo/alterInfo.wxss */
+.info-list picker {
+  width: 20%;
+  float: left;
+  margin-right: 20rpx;
+  text-align: center;
+  overflow: hidden;
+}

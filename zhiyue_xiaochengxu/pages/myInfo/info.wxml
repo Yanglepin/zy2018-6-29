@@ -1,0 +1,47 @@
+<!--pages/Info/info.wxml-->
+<block>
+<view class="container">
+  <view class='header bb10'>
+    <navigator url="../index/index" hover-class="navigator-hover" bindtap="navigateBack">
+      <text class='iconfont icon-jiantou3 icon-left'></text>
+    </navigator>
+    <text class='title'>我的信息</text>
+  </view>
+  <view class='info-lst'>
+    <!-- <view>个人信息</view> 
+    <text>宝宝姓名：张三</text>
+    <text>手机号：123456789</text>
+    <text>宝宝生日：2018-5-8</text>
+    <text>地址：郑州市二七区升龙城8号院17楼</text> -->
+    <view>{{userInfo.text}}</view> 
+    <text>宝宝姓名：{{userInfo.code}}</text>
+    <text>手机号：{{userInfo.text}}</text>
+    <text>宝宝生日：{{userInfo.text}}</text>
+    <text>地址：{{userInfo.text}}</text>
+  </view>
+
+  <view class='info-lst'>
+    <!-- <view>已借阅</view>
+    <text>您目前共借阅了3本书</text>
+    <text>我们已经为您服务了3次</text> -->
+    <view>{{readed.text}}</view>
+    <text>{{readed.text}}</text>
+    <text>{{readed.code}}</text>
+  </view> 
+
+  <view class='info-lst'>
+    <!-- <view>借阅计划</view>
+    <text>会员卡类型：半年卡 </text>
+    <text>服务期限：2018年5月4日起13次，剩余13次</text>
+    <text>服务截止：2018年9月30日</text>
+    <text>归还周期：7天</text>
+    <text>单次借阅：5本/次</text> -->
+    <view>{{plan.text}}</view>
+    <text>会员卡类型：{{plan.text}} </text>
+    <text>服务期限：{{plan.text}}</text>
+    <text>服务截止：{{plan.text}}</text>
+    <text>归还周期：{{userInfo.text}}</text>
+    <text>单次借阅：{{plan.text}}</text>
+  </view>
+</view>
+</block>

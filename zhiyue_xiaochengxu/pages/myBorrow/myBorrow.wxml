@@ -1,0 +1,74 @@
+<!--pages/myBorrow/myBorrow.wxml-->
+<block>
+  <view class='header'>
+    <navigator url="../index/index" hover-class="navigator-hover" open-type="switchTab">
+      <text class='iconfont icon-jiantou3 icon-left'></text>
+    </navigator>
+    <text class='title'>我的预借</text>
+  </view>
+  <view class="book-list clearfix bb" wx:for="{{bookList}}" wx:key="{{item.id}}">
+    	<view class="left fl">
+    	  <navigator url="../details/details" hover-class="navigator-hover">
+    		  <image src="{{ImgUrl}}{{item.pic_cover}}" style='width:120rpx;height:175rpx;'></image> 
+        </navigator>
+    	</view>
+      <view class="right fl">
+        <navigator url="../details/details" hover-class="navigator-hover">
+          <text class="elli2">{{item.goods_name}}</text>
+        </navigator>
+        <text>{{item.age_name}}</text>
+        <text>{{item.shop_name}}</text>
+        <text>书架号：{{item.shu_name}}-{{item.wei_name}}</text>
+        <text  wx:if="{{item.state == 0}}">是/否在架：否</text>
+        <text   wx:else>是/否在架：是</text>
+        
+    		<view class='book-btn'>
+          <text bindtap='onBorrowCancel' data-borrow='{{item.borrow_id}}' data-bookid='{{item.books_id}}'>取消预借</text>
+        </view>
+    	</view>
+    </view>
+    <!-- <view class="book-list clearfix bb">
+    	<view class="left fl">
+    		<navigator url="../details/details" hover-class="navigator-hover">
+    		  <image src="../../icons/book.png" style='width:120rpx;height:170rpx;'></image> 
+        </navigator>
+    	</view>
+    	<view class="right fl">
+    		<navigator url="../details/details" hover-class="navigator-hover">
+          <text class="elli2">小小科学家，困厄于名缰利锁，自然面目可憎，焉能语言有味?决心的起点，蹉跎的终点，与心灵对话</text>
+        </navigator>
+    		<text>8-10岁</text>
+    		<text>实验百科</text>
+    		<text>书架号：A-24</text>
+    		<text>是/否在架：是</text>
+    		<view class='book-btn'>
+          <text>取消预借</text>
+        </view>
+    	</view>
+    </view>
+    <view class="book-list clearfix bb">
+    	<view class="left fl">
+    		<navigator url="../details/details" hover-class="navigator-hover">
+    		  <image src="../../icons/book.png" style='width:120rpx;height:170rpx;'></image> 
+        </navigator>
+    	</view>
+    	<view class="right fl">
+    		<navigator url="../details/details" hover-class="navigator-hover">
+          <text class="elli2">小小科学家，困厄于名缰利锁，自然面目可憎，焉能语言有味?决心的起点，蹉跎的终点，与心灵对话</text>
+        </navigator>
+    		<text>8-10岁</text>
+    		<text>实验百科</text>
+    		<text>书架号：A-24</text>
+    		<text>是/否在架：是</text>
+    		<view class='book-btn'>
+          <text>取消预借</text>
+        </view>
+    	</view>
+    </view> -->
+    <view class='cue'>
+      <text>已经预借了{{total_now}}本，还可以选择{{total}}本书</text>
+          <text class='btn' bindtap='onSkip'>立即借书</text>
+    </view>
+    
+</block>
+

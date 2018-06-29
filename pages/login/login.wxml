@@ -1,0 +1,22 @@
+<!--pages/login/login.wxml-->
+<block>
+  <view class='header'>
+    <navigator url="../index/index" hover-class="navigator-hover" open-type='switchTab'>
+      <text class='iconfont icon-jiantou3 icon-left'></text>
+    </navigator>
+    <text class='title'>登录</text>
+  </view>
+  <view class='info-list bt10 clearfix'>
+    <label class='fl'>手机号:</label>
+    <input type='text' class='fl' placeholder='请输入手机号' bindinput="phoneInput" auto-focus/>
+  </view>
+  <view class='info-list clearfix'>
+    <label class='fl'>验证码:</label>
+    <input type='text' class='fl v-code' placeholder='请输入验证码' keycode="true" bindinput="addCode"/>
+    <text class='v-hq fl' wx:if="{{send}}" bindtap='sendMsg'>获取</text>
+    <text class='v-hq fl' wx:if="{{alreadySend}}" bindtap='sendMsg'>{{second}}s</text>
+  </view>
+  <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="onSubmit" hover-class="other-button-hover"> 登录 </button>
+</block>
+

@@ -1,0 +1,46 @@
+<!--pages/bookSelect/bookSelect.wxml-->
+<!--pages/borrow/bookBorrow.wxml-->
+<block>
+<view class="container"> 
+  <view class='header'>
+    <navigator url="../borrow/bookBorrow" hover-class="navigator-hover">
+      <text class='iconfont icon-jiantou3 icon-left' bindtap='navigateBack'></text>
+    </navigator>
+    <text class='title'>图书筛选</text>
+  </view>
+
+  <view class='select-con clearfix'>
+    <view>适读年龄</view>
+    <view class='clearfix' style='padding-left:20rpx;'>
+      <text bindtap='ageTap' data-id='{{item.age_id}}' wx:for="{{bookSelect}}" class="{{key1==item.age_id?ffff:''}}" hover-class='active'>{{item.age_name}}</text>
+    </view>
+  </view>
+
+  <view class='select-con clearfix'>
+    <view>所属主题</view>
+    <view class='clearfix' style='padding-left:20rpx;'>
+      <text bindtap='themeTap' data-id='{{item.theme_id}}' class="{{key2==item.theme_id?ffff:''}}"  wx:for="{{themeList}}">{{item.theme_name}}</text>
+    </view>
+  </view>
+
+  <view class='select-con clearfix'>
+    <view>图书品牌</view>
+    <view class='clearfix' style='padding-left:20rpx;'>
+      <text bindtap='brandTap' data-id='{{item.brand_id}}' class="{{key3==item.brand_id?ffff:''}}"  wx:for="{{brandList}}">{{item.brand_name}}</text>
+    </view>
+  </view>
+
+  <view class='select-con clearfix'>
+    <view>所获大奖</view>
+    <view class='clearfix' style='padding-left:20rpx;'>
+      <text bindtap='prizeTap' data-id='{{item.prize_id}}' class="{{ key4==item.prize_id?ffff:''}}"  wx:for="{{prizeList}}">{{item.prize_name}}</text>
+    </view>
+  </view>
+  <view class='select-btn'>
+    <text bindtap='navQuXiao' class='cancel'>取消</text>
+    <text class='sure' bindtap='navigateBack'>确定</text>
+  </view>
+
+</view>
+</block>
+

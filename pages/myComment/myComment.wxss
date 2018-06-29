@@ -1,0 +1,6 @@
+/* pages/myComment/myComment.wxss */
+.booklist .right {
+  margin-top: 10rpx;
+}
+
+

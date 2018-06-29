@@ -1,0 +1,21 @@
+<!--pages/myComment/myComment.wxml-->
+<block>
+  <view class='header'>
+    <navigator url="../index/index" hover-class="navigator-hover" bindtap="navigateBack">
+      <text class='iconfont icon-jiantou3 icon-left'></text>
+    </navigator>
+    <text class='title'>我的评论</text>
+  </view> 
+  <view class="book-list clearfix bb" wx:for="{{bookList}}">
+    <view class="left fl" bindtap='goinfo' data-goodsid="{{item.goods_id}}">
+      <image src="{{ImgUrl}}{{item.pic_cover}}" style='width:110rpx;height:150rpx;'></image> 
+    </view>
+    <view class="right fl" style='padding-top: 35rpx;'>
+      <text class="elli2" bindtap='goinfo' data-goodsid="{{item.goods_id}}">{{item.content}}</text>
+      <text class='mt10'>评论发表于：{{item.addtime}}</text>
+    </view>
+  </view> 
+    
+</block>
+
+

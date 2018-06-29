@@ -1,0 +1,32 @@
+<!--pages/myBorrow/myBorrow.wxml-->
+<block>
+  <view class='header'>
+    <navigator url="../index/index" hover-class="navigator-hover" open-type="switchTab">
+      <text class='iconfont icon-jiantou3 icon-left'></text>
+    </navigator>
+    <text class='title'>我的预借</text>
+  </view>
+  
+  <view class="book-list clearfix bb" wx:for="{{bookList}}">
+    	<view class="left fl" bindtap='goinfo' data-goodsid="{{item.books_id}}">
+    		<image src="{{ImgUrl}}{{item.pic_cover}}" style='width:120rpx;height:175rpx;'></image> 
+    	</view>
+      <view class="right fl">
+        <text class="elli2" bindtap='goinfo' data-goodsid="{{item.books_id}}">{{item.goods_name}}</text>
+        <text>{{item.age_name}}</text>
+        <text>{{item.shop_name}}</text>
+        <text>书架号：{{item.shu_name}}-{{item.wei_name}}</text>
+        <text wx:if="{{item.state == 0}}">是/否在架：否</text>
+        <text wx:else>是/否在架：是</text>
+    		<view class='book-btn'>
+          <text bindtap='onBorrowCancel' data-borrow='{{item.borrow_id}}' data-bookid='{{item.books_id}}'>取消预借</text>
+        </view>
+    	</view>
+    </view>
+    <view class='cue'>
+      <text>已经预借了{{total_now}}本，还可以选择{{total}}本书</text>
+      <text class='btn' bindtap='onSkip'>立即借书</text>
+    </view>
+    
+</block>
+

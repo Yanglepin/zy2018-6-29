@@ -1,0 +1,54 @@
+/* pages/borrowHistory/borrowHistory.wxss */
+.on {
+  color: #63b4ad;
+}
+.his-list {
+  width: 80%;
+  font-size: 21rpx;
+  margin-top: 10rpx;
+}
+.his-list view { 
+  display: inline-block;
+  height: 35rpx;
+  line-height: 35rpx;
+  color: #434240;
+  width: 50%;
+}
+.his-list text {
+  color:#63b4ad !important;
+  display: inline-block;
+  font-size: 20rpx;
+}
+.top-search {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 15rpx 0rpx;
+}
+.top-search input {
+    width: 70%;
+    /* color: #c6c3c3; */
+    font-size: 24rpx;
+    padding-left: 10rpx;
+    margin: 0rpx 50rpx;
+    border: 1px solid #d1d2d3;
+    border-radius: 5px;
+    height: 30px;
+    outline: none;
+    background-color: #ffffff;
+}
+.top-search icon {
+  position: absolute;
+  left: 72%;
+  top: 30rpx;
+}
+.top-search .search-txt {
+  position: absolute;
+  left: 78%;
+  top: 20rpx;
+}
+.top-search .search-txt text {
+  font-size: 30rpx;
+  display: inline-block;
+  margin-left: 40rpx;
+}
+  

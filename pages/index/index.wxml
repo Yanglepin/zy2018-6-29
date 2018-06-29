@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<block>
+  <view class="container"> 
+    <view class='logo'><image src='../../icons/logo.png'></image></view>
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000" indicator-color="rgba(255, 255, 255, 255)" indicator-active-color="#addfd7">    
+        <block wx:for="{{movies}}" wx:for-index="index" wx:key="*this">    
+          <swiper-item>    
+            <image src="{{ImgUrl}}{{item.ad_image}}" class="slide-image" mode="aspectFill"/>    
+          </swiper-item>    
+        </block>    
+      </swiper>
+      <view class='news-dt clearfix'>
+        <image src='../../icons/dt.png'></image>
+        <view style='padding-top:14.5rpx;'>
+          <view class='dt-con clearfix' wx:for="{{dtCon}}" wx:key="{{item.id}}">
+            <text>活动</text>
+            <view class='dt1 elli1'>{{item.title}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class='dt-tit bt10 bb10 clearfix'>
+        <view class="tit-left fl br pt10 pb10">
+          <image src="../../icons/read.png" bindtap="bindRead"></image>
+          <text bindtap="bindRead">借阅排行</text>
+        </view>
+        <view class="tit-left fl pt10 pb10">
+          <image src="../../icons/new.png" bindtap='bindNew'></image>
+          <text bindtap='bindNew'>最新上架</text>
+        </view> 
+      </view>  
+
+      <view class='gr bb10 clearfix'> 
+        <view class="gr-read bb">
+          <text decode="{{true}}">&ensp;个人阅读数据</text>
+        </view> 
+        <view class="read-date fl br pt10 pb10 hui20">
+          <text style='font-size:24rpx;'>{{personalRead.count_book}}</text>
+          <image src="../../icons/yd1.png"></image>
+          <text>借阅总本数</text>
+        </view>
+        <view class="read-date fl br pt10 pb10 hui20">
+          <text style='font-size:24rpx;'>{{personalRead.pai_ming}}</text>
+          <image src="../../icons/yd2.png"></image>
+          <text>阅读总排行</text>
+        </view>
+        <view class="read-date fl pt10 pb10 hui20">
+          <text style='font-size:24rpx;'>￥{{personalRead.jia_zhi}}</text>
+          <image src="../../icons/yd3.png"></image>
+          <text>阅读总价值</text>
+        </view> 
+      </view>
+
+      <view class='gr clearfix'>
+        <view class="gr-read bb">
+          <text decode="{{true}}">&ensp;月度阅读排行榜</text>
+        </view> 
+        <view class='yd-list' wx:for="{{monthRead}}" wx:key="*this">
+          <view class='list-con bb hui24 clearfix'>
+            <image src="../../icons/icon1.png" style='width:26rpx; height:32rpx;'></image>
+            <text class='name fl'>{{item.real_name}}</text>
+            <text class='fr'>{{item.count}}</text>
+          </view>
+        </view>
+      </view>
+
+  </view>
+</block>

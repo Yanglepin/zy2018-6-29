@@ -1,0 +1,14 @@
+/* pages/login/login.wxss */
+.v-code {
+  width: 56% !important;
+}
+.v-hq {
+  width: 12% !important;
+  color: #63b3ac;
+  border: 1px solid #63b3ac;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}

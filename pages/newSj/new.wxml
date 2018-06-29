@@ -1,0 +1,150 @@
+<!--pages/newSj/new.wxml-->
+<block> 
+  <view class='header'>
+    <navigator url="../index/index" hover-class="navigator-hover" open-type="switchTab">
+      <text class='iconfont icon-jiantou3 icon-left'></text>
+    </navigator>
+    <text class='title'>图书借阅</text>
+  </view> 
+  <view style="border-bottom: 8px solid #f0f1f2;"></view> 
+
+  <view class="book-list clearfix bb" wx:for="{{bookList}}"> 
+    <view class="left fl" bindtap='goinfo' data-goodsid="{{item.goods_id}}">
+      <image src="{{ImgUrl}}{{item.pic_cover}}" style='width:120rpx;height:175rpx;'></image> 
+    </view>
+    <view class="right fl">
+      <text class="elli2" bindtap='goinfo' data-goodsid="{{item.goods_id}}">{{item.goods_name}}</text>
+      <text>{{item.age_name}}</text>
+      <text>{{item.shop_name}}</text>
+      <text>书架号：{{item.bookNum}}</text>
+      <text>是/否在架：{{item.is_stock_visible}}</text>
+      <view class='book-btn'>
+        <text data-id='{{item.goods_id}}' bindtap='onBorrowSuccess'>+预借</text>
+        <text data-id='{{item.goods_id}}' bindtap='onCollectSuccess'>+收藏</text>
+      </view>
+    </view>
+  </view>
+    <!-- <view class="book-list clearfix bb">
+    	<view class="left fl">
+        <navigator url="../details/details" hover-class="navigator-hover">
+          <image src="../../icons/book.png" style='width:120rpx;height:170rpx;'></image> 
+        </navigator>
+      </view>
+    	<view class="right fl">
+    		<navigator url="../details/details" hover-class="navigator-hover">
+          <text class="elli2">小小科学家，困厄于名缰利锁，自然面目可憎，焉能语言有味?决心的起点，蹉跎的终点，与心灵对话</text>
+        </navigator>
+    		<text>8-10岁</text>
+    		<text>实验百科</text>
+    		<text>书架号：A-24</text>
+    		<text>是/否在架：是</text>
+    		<view class='book-btn'>
+          <text bindtap='onSkip'>+预借</text>
+          <navigator url="../myCollect/myCollect" hover-class="navigator-hover">
+            <text>+收藏</text>
+          </navigator>
+        </view>
+    	</view>
+    </view>
+    <view class="book-list clearfix bb">
+    	<view class="left fl">
+    		<image src="../../icons/book.png" style='width:120rpx;height:170rpx;'></image> 
+    	</view>
+    	<view class="right fl">
+    	  <navigator url="../details/details" hover-class="navigator-hover">
+          <text class="elli2">小小科学家，困厄于名缰利锁，自然面目可憎，焉能语言有味?决心的起点，蹉跎的终点，与心灵对话</text>
+        </navigator>
+    		<text>8-10岁</text>
+    		<text>实验百科</text>
+    		<text>书架号：A-24</text>
+    		<text>是/否在架：是</text>
+    		<view class='book-btn'>
+          <text bindtap='onSkip'>+预借</text>
+          <navigator url="../myCollect/myCollect" hover-class="navigator-hover">
+            <text>+收藏</text>
+          </navigator>
+        </view>
+    	</view>
+    </view>
+    <view class="book-list clearfix bb">
+    	<view class="left fl">
+    		<image src="../../icons/book.png" style='width:120rpx;height:170rpx;'></image> 
+    	</view>
+    	<view class="right fl">
+    	  <navigator url="../details/details" hover-class="navigator-hover">
+          <text class="elli2">小小科学家，困厄于名缰利锁，自然面目可憎，焉能语言有味?决心的起点，蹉跎的终点，与心灵对话</text>
+        </navigator>
+    		<text>8-10岁</text>
+    		<text>实验百科</text>
+    		<text>书架号：A-24</text>
+    		<text>是/否在架：是</text>
+    		<view class='book-btn'>
+          <text bindtap='onSkip'>+预借</text>
+          <navigator url="../myCollect/myCollect" hover-class="navigator-hover">
+            <text>+收藏</text>
+          </navigator>
+        </view>
+    	</view>
+    </view>
+    <view class="book-list clearfix bb">
+    	<view class="left fl">
+    		<image src="../../icons/book.png" style='width:120rpx;height:170rpx;'></image> 
+    	</view>
+    	<view class="right fl">
+    	  <navigator class='sort-bt' url="../details/details" hover-class="navigator-hover">
+          <text class="elli2">小小科学家，困厄于名缰利锁，自然面目可憎，焉能语言有味?决心的起点，蹉跎的终点，与心灵对话</text>
+        </navigator>
+    		<text>8-10岁</text>
+    		<text>实验百科</text>
+    		<text>书架号：A-24</text>
+    		<text>是/否在架：是</text>
+    		<view class='book-btn'>
+          <text bindtap='onSkip'>+预借</text>
+          <navigator url="../myCollect/myCollect" hover-class="navigator-hover">
+            <text>+收藏</text>
+          </navigator>
+        </view>
+    	</view>
+    </view>
+    <view class="book-list clearfix bb">
+    	<view class="left fl">
+    		<image src="../../icons/book.png" style='width:120rpx;height:170rpx;'></image> 
+    	</view>
+    	<view class="right fl">
+    	  <navigator url="../details/details" hover-class="navigator-hover">
+          <text class="elli2">小小科学家，困厄于名缰利锁，自然面目可憎，焉能语言有味?决心的起点，蹉跎的终点，与心灵对话</text>
+        </navigator>
+    		<text>8-10岁</text>
+    		<text>实验百科</text>
+    		<text>书架号：A-24</text>
+    		<text>是/否在架：是</text>
+    		<view class='book-btn'>
+          <text bindtap='onSkip'>+预借</text>
+          <navigator url="../myCollect/myCollect" hover-class="navigator-hover">
+            <text>+收藏</text>
+          </navigator>
+        </view>
+    	</view>
+    </view>
+    <view class="book-list clearfix bb">
+    	<view class="left fl">
+    		<image src="../../icons/book.png" style='width:120rpx;height:170rpx;'></image> 
+    	</view>
+    	<view class="right fl">
+    	  <navigator url="../details/details" hover-class="navigator-hover">
+          <text class="elli2">小小科学家，困厄于名缰利锁，自然面目可憎，焉能语言有味?决心的起点，蹉跎的终点，与心灵对话</text>
+        </navigator>
+    		<text>8-10岁</text>
+    		<text>实验百科</text>
+    		<text>书架号：A-24</text>
+    		<text>是/否在架：是</text>
+    		<view class='book-btn'>
+          <text bindtap='onSkip'>+预借</text>
+          <navigator url="../myCollect/myCollect" hover-class="navigator-hover">
+            <text>+收藏</text>
+          </navigator>
+        </view>
+    	</view>
+    </view> -->
+</block>
+

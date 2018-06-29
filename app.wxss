@@ -1,0 +1,236 @@
+
+@font-face {
+    font-family: 'iconfont';
+    src: url(data:font/truetype;charset=utf-8;base64,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) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiantou3:before { content: "\e605"; }
+
+.icon-icon-plus-search:before { content: "\e714"; }
+
+.icon-jiantou:before { content: "\e616"; }
+page { height: 100%; }
+navigator { display: inline;}
+images,text { display: block; }
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+}
+.fl { float: left; }
+.fr { float: right; }
+.pt10 { padding-top: 30rpx; }
+.pb10 { padding-bottom: 30rpx; }
+.mt10 { margin-top: 30rpx; }
+.br{ border-right: 3rpx solid #f0f0f0; box-sizing: border-box; }
+.bb{ border-bottom: 3rpx solid #f0f0f0; box-sizing: border-box; }
+.bt10 { border-top: 10rpx solid #f0f0f0;}
+.bb10 { border-bottom: 10rpx solid #f0f0f0;}
+.hui20 { 
+  font-size: 20rpx; 
+  color: #666666;
+  }
+.hui24 { 
+  font-size: 26rpx; 
+  color: #666666;
+  }
+.elli1 {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.elli2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* 轮播图 */
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+/* Tab标签页 */
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 1px solid #dadada;
+    text-align: center;  
+    line-height: 80rpx;
+}  
+.swiper-tab-list{  
+    font-size: 30rpx;  
+    display: inline-block;  
+    width: 45%;  
+}  
+.on{
+   border-bottom: 5rpx solid #63b4ad;
+}  
+  
+.swiper-box{ 
+  display: block; 
+  height: 100%; 
+  width: 100%; 
+  overflow: hidden;
+}   
+.swiper-items{
+  height: 100%;
+}
+.scroll-views{
+  height: 100%;
+}
+/* 头部 */
+.header {
+    width:100%;  
+    margin: 0 auto;
+    height:90rpx; 
+    line-height:90rpx; 
+    overflow: hidden; 
+    background-color: #63b4ad; 
+    color: #fff; 
+    position: relative;
+}
+.header .icon-left {
+  position: absolute;
+  top: 3rpx;
+  left: 20rpx
+}
+.header text.title {
+  font-size: 35rpx;
+  text-align: center;
+  margin: 0 50rpx;
+  overflow: hidden;
+}
+
+.book-list .left {
+    width: 18%;
+    padding: 20rpx 0rpx 20rpx 20rpx;
+}
+.book-list .left image{
+    padding: 5rpx;
+    border: 1px solid #d1d2d3;
+    box-sizing: border-box;
+}
+.book-list .right {
+    width: 75%;
+    padding-left: 15rpx;
+    padding-top: 15rpx;
+    position: relative;
+}
+.book-list .right text {
+    color: #666666;
+    font-size: 20rpx;
+    line-height: 26rpx;
+}
+.book-list .right .book-btn text{
+    background-color: #77c6c0;
+    color: #ffffff;
+    font-size: 26rpx;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 15rpx;
+    padding: 10rpx 2rpx;
+    width: 40%;
+    display: inline-block;   
+}
+.book-list .right .book-btn {
+  position: absolute;
+  width: 40%;
+  right: 5rpx;
+  top: 150rpx;
+}
+.book-list .right text.elli2 {
+    font-size: 26rpx;
+    color: #434240;
+    height: 70rpx;
+    line-height: 45rpx;
+    margin-bottom: 3px;
+}
+.find-details { 
+   margin: 10px; 
+   color: #666666;
+   font-size: 26rpx;
+} 
+ /* .find-details text{
+  line-height: 23px;
+  color: #666666;
+  font-size: 26rpx;
+  padding: 0px 3%;
+  text-indent: 1.5rem;
+}  */
+.yd-list .list-con {
+  padding: 20rpx;
+}
+.yd-list .list-con image{
+  display:inline-block;
+  width:40rpx; 
+  height:40rpx; 
+  float:left;
+}
+.yd-list .list-con text.name { 
+  padding-left: 20rpx;
+}
+
+.info-list {
+  color: #333232;
+  font-size: 30rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #e5e5e5;
+  padding-left: 20rpx;
+  overflow: hidden;
+}
+.info-list text,.info-list label {
+  width: 25%;
+  text-align: center;
+}
+.info-list input {
+  width: 70%;
+  margin-top: 22rpx;
+}
+button[type=default] {
+  color: #ffffff;
+  background-color: #63b3ac;
+  width: 90%;
+  margin: 50% auto;
+}
+.cityheader {
+  position: absolute;
+  top:2%;
+  width: 100%;
+  z-index: 4;
+}
+.city-cancel {
+  float: left;
+  margin: 80rpx;
+  color: #818181;
+}
+.city-true {
+  float: right;
+  margin: 80rpx;
+  color: #2FB42E
+}
+picker-view-column {
+  text-align: center;
+}
+ .citypicker {
+   position: relative;
+ }
+ .citypicker .citybody {
+   position: absolute;
+   background-color: #ffffff;
+   z-index: 300;
+   top: 40%;
+} 

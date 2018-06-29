@@ -1,0 +1,35 @@
+/* pages/news/newsList.wxss */
+.news-list {
+  margin: 0 20rpx;
+      border-bottom: 1px solid #dadada;
+}
+.news-list .left {
+    width: 16%;
+    display: inline-block;
+    background-color: #77c6c0;
+    color: #ffffff;
+    padding-bottom: 1%;
+    margin: 3% 0;
+}
+.news-list .left text {
+  display: block;
+  text-align: center; 
+  font-size: 50rpx;
+}
+.news-list .left text.day {
+  font-size: 24rpx;
+}
+.news-list .right {
+    width: 80%;
+    display: inline-block;
+    margin: 3% 0 0 4%;
+}
+.news-list .right text.news-tit {
+  font-size: 30rpx;
+  color: #333333;
+  margin-bottom: 1%;
+}
+.news-list .right text {
+  font-size: 24rpx;
+  color: #666666;
+}

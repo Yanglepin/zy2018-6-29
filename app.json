@@ -1,0 +1,61 @@
+{
+  "pages":[
+  "pages/login/login",
+      "pages/index/index",
+      "pages/details/details",
+      "pages/Member/myInfo",
+      "pages/borrow/bookBorrow",
+      "pages/readPh/read",
+      "pages/newSj/new",
+      "pages/myBorrow/myBorrow",
+      "pages/bookSelect/bookSelect",
+      "pages/myCollect/myCollect",
+      "pages/myComment/myComment",
+      "pages/news/newsList",
+      "pages/information/information", 
+      "pages/myInfo/info",
+      "pages/borrowHistory/borrowHistory",
+      "pages/aboutUs/aboutUs",
+      "pages/alterInfo/alterInfo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle":"black",
+    "navigationBarTitleText":"",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color":"#666",
+    "selectedColor": "#5bbfae",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"icons/tb1.png",
+      "selectedIconPath":"icons/tb1_b.png"
+    }, {
+      "pagePath": "pages/borrow/bookBorrow",
+      "text": "借阅",
+      "iconPath":"icons/tb2.png",
+      "selectedIconPath":"icons/tb2_b.png"
+    },
+    {
+      "pagePath": "pages/myBorrow/myBorrow",
+      "text": "我的预借",
+      "iconPath":"icons/tb3.png",
+      "selectedIconPath":"icons/tb3_b.png"
+    },{
+      "pagePath": "pages/news/newsList",
+      "text": "资讯",
+      "iconPath":"icons/tb4.png",
+      "selectedIconPath":"icons/tb4_b.png"
+    },
+    {
+      "pagePath":"pages/Member/myInfo",
+      "text":"我的",
+      "iconPath":"icons/tb5.png",
+      "selectedIconPath":"icons/tb5_b.png"
+    }]
+  }
+}
